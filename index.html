@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <!-- React가 렌더링할 루트 요소를 정의 -->
     <div id="root"></div>
   </body>
-  <!-- React와 ReactDOM의 CDN 링크를 추가 -->
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script>
-    // 'root'라는 ID를 가진 요소를 선택
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.getElementById("root");
-    
-    // 'h3' 요소를 생성하고 'onMouseEnter' 이벤트 리스너를 추가
-    const h3 = React.createElement(
-        "h3",
-        {
-            onMouseEnter: () => console.log("mouse enter"),
-        }, 
-        "Hello I'm a span"
-    );
-    
-    // 'button' 요소를 생성하고 'onClick' 이벤트 리스너를 추가
-    const btn = React.createElement(
-        "button",
-        {
-            onClick: () => console.log("I'm clicked"),
-            // property 부분에 이벤트 리스너를 등록       
-            style: {
-		            backgroundColor: "tomato",
-            }
-        }, 
-        "Click me"
+
+    function Title() {
+      return (
+        <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+          Hello I'm a title
+        </h3>
+      );
+    }
+
+    const Button = () => (
+      <button
+        style={{
+          backgroundColor: "tomato",
+        }}
+        onClick={() => console.log("I'm clicked")}
+      >
+        Click me
+      </button>
     );
 
-    // 'div' 요소를 생성하고 그 안에 'h3'와 'button' 요소를 포함
-    const container = React.createElement("div", null, [h3, btn]);
+    const container = (
+      <div>
+        <Title />
+        <Button />
+      </div>
+    );
 
-    // ReactDOM을 사용하여 'container'를 'root' 요소에 렌더링
     ReactDOM.render(container, root);
-
   </script>
 </html>
