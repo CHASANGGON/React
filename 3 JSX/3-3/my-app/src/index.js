@@ -12,6 +12,7 @@ import Accommodate from "./chapter_07/Accommodate";
 import ConfirmButton from "./chapter_08/ConfirmButton";
 import LandingPage from "./chapter_09/LnadingPage";
 
+
 ReactDOM.render(
   <React.StrictMode>
     <LandingPage />
