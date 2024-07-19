@@ -32,6 +32,7 @@ async function getData() {
 //     });
 // }
 
+
 // 참고로 여기서도 앞에 async를 붙여야함!
 async function printData() {
   const data = await getData();
