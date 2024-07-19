@@ -34,6 +34,7 @@ cooldownFood("떡볶이", (food) => {
 })
 
 
+
 // 콜백 지옥 경험해보기
 function orderFood(callback) {
   setTimeout(() => {

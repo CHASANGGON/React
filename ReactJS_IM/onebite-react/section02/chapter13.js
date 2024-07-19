@@ -50,6 +50,7 @@ function add10(num) {
 //     console.log(error);
 //   });
 
+
 add10(0)
   .then((result) => {
     console.log(result);
