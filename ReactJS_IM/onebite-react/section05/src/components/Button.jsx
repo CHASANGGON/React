@@ -8,11 +8,7 @@ const Button = ({ text, color, children }) => {
   };
 
   return (
-    <button
-      onClick={onCLickButton}
-      //   onMouseEnter={onCLickButton}
-      style={{ color: color }}
-    >
+    <button onClick={onCLickButton} style={{ color: color }}>
       {text} - {color.toUpperCase()}
       {children}
     </button>

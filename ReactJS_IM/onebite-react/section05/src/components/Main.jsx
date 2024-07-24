@@ -12,7 +12,12 @@
 //          빈 태그로도 가능, 실제 페이지에서는 없는 걸로 보임
 import "./Main.css";
 
-const Main = () => {
+const Main = (abc) => {
+  console.log(abc)
+  console.log(abc.abc.a)
+  console.log(abc.abc.b)
+  console.log(abc.abc.c)
+  
   const number = 10;
   const user = {
     name: "차상곤",
@@ -27,7 +32,7 @@ const Main = () => {
         // style={{
         //   backgroundColor: "red",
         //   borderBottom: "5px solid blue",
-        // }}
+        // }} 
       >
         로그아웃
       </div>
