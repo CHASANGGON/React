@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   // 2. 업데이트 : 변화, 리렌더링
-  //   아래와 같이 deps를 생략하면 update가 일어날 때 항상 호출
+  //   아래와 같이 deps를 생략하면, 컴포넌트가 update될 때마다(리렌더링될 때마다) 항상 호출
   useEffect(() => {
     if (!isMount.current) {
       isMount.current = true;
